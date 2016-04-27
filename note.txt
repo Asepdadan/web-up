@@ -1,0 +1,48 @@
+v0.0
+Basic HMVC
+
+v0.1
+move modules outside application and call another modules in controllers and views
+
+v0.2
+remap function is added
+
+v0.3
+home modules is repaired
+
+v0.4
+jssor implemented. Jssor is animated slideshow from jquery
+
+v0.5
+luxus template is added
+
+v0.6 2016-01-02 11:10
+datatable is added
+.htaccess implemented
+
+v0.7 2016-01-02 09:38
+datatable dynamic is added
+
+v0.8 2016-01-09 14:25
+admin page is added
+
+v0.9 2016-01-23 14:00
+datatable complete is added
+
+v1.01 2016-01-25 05:23
+mysql technique for grabbing multi table in once operation.Combination of mysql, php, and json
+
+v1.02 2016-01-26 11:48
+mysql technique for grabbing multi table in once operation. Json Object 
+
+v1.03A 2016-02-03 17:48
+Datatable json basic from database
+
+v1.04 2016-02-10 21:55
+Redbean & Library
+
+v1.05 2016-02-19 15:55
+Bootstrap
+
+v1.06 2016-02-29 11:17
+Module one page
