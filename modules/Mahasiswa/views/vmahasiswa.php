@@ -44,7 +44,7 @@
                         <div class="clearfix"></div>
                         <br />
                         <!-- sidebar menu -->
-                        <?php echo modules::run('Menu/remap/admin');  ?>
+                        <?php echo modules::run('Menu/mahasiswa');  ?>
                         <!-- /sidebar menu -->
                     </div>
                 </div>
@@ -136,6 +136,17 @@
                                     <h5>Selamat Datang di Sistem Informasi Penelitian dan Pengabdian Kepada Masyarakat POLBAN.
                                     Anda Login sebagai Dosen Pengusul Kegiatan.</h5>
                                 </div>
+
+                                <div class="container">
+                                <ol start="1">
+                                    <li>Melakukan status penelusuran status proposal</li>
+                                    <li>Mengunggah buku catatan harian kegiatan</li>
+                                    <li>Mengentrykan laporan kemajuan</li>
+                                    <li>Memantau agenda kegiatan</li>
+
+                                </ol>
+                                </div>
+
                                 <div class="row menu-aplikasi">
                                     <div class="col-md-3">
                                         <center>

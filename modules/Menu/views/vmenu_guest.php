@@ -1,4 +1,4 @@
- <header>
+<header>
         <div class="navbar-header">
             <div class="container-fluid" >
 
@@ -66,22 +66,19 @@
 
                             <li class="parent">
                                <a href="#">Kerjasama</a>
-                               <ul>
-                                 <li class=""><a href="#" target="blank">Profile Kerjasama</a>
-                                
+                               <ul class="dropdown-menu">
+                                 <li class="dropdown-submenu"><a href="#">Profile Kerjasama</a>
                                  </li>
                                 <li><a href="#" target="blank">Profile Mitra</a></li>
 
                             </ul>
                             </li>
 
-                         
-
                             <li>
                                 <a href="./" title="Login">Login</a>
                             </li>
 
-                        </ul>
+                        </ul>   
                     </div>
                 </nav>
 

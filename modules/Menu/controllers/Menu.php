@@ -47,4 +47,14 @@ class Menu extends MX_Controller {
             $this->load->view('vmenu_guest');
 
         }
+
+        public function mahasiswa(){
+
+             $this->load->view('vmenu_mahasiswa');
+        }
+
+        public function main(){
+
+             $this->load->view('vmenu_main');
+        }
 }

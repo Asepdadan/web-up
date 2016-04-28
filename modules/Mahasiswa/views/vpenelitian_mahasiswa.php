@@ -48,7 +48,7 @@
                         <div class="clearfix"></div>
                         <br />
                         <!-- sidebar menu -->
-                        <?php echo modules::run('Menu/remap/admin');  ?>
+                        <?php echo modules::run('Menu/mahasiswa');  ?>
                         <!-- /sidebar menu -->
                     </div>
                 </div>
@@ -162,7 +162,7 @@
 
                                 <br>
 
-                                       <?php echo Modules::run('Dosen/detail_tab');?>
+                                       <?php echo Modules::run('Mahasiswa/detail_tab');?>
                             
                      
                         </div>
