@@ -12,13 +12,14 @@ class Berita extends MX_Controller {
     }
 
     public function index() {
-        redirect('Mahasiswa/main');
+        redirect('Berita/posting');
     }
 
     public function posting() {
         $data['murl'] = $this->murl;
         $data['title'] = "Posting Berita";
-        $data['query'] = $this->Moap->table('berita');
+        $data['query'] = $this->db->get('berita')->result_array();
+
         $this->load->view('vberita', $data);
     }
     
@@ -39,7 +40,17 @@ class Berita extends MX_Controller {
           {
               
           $error = array('error' => $this->upload->display_errors());
-          redirect('Berita/posting',$error);
+            //array insert
+           $post = array(
+            'judul' => $this->input->post('judul'),
+            'isi' => $this->input->post('isi')
+            );
+
+            //query Moap Insert
+            $this->Moap->insert('berita',$post);
+
+            $this->session->set_flashdata('message', 'Posting Berita Successfuly Tanpa Gambar tersimpan!!');
+            redirect('Berita/posting',$error);
           
           }
           else
@@ -68,10 +79,42 @@ class Berita extends MX_Controller {
     public function delete_berita($id = "")
         {
             # code...
-            $where = array('id' => $id);
-            $this->Moap->delete('berita',$where);
+        $data= $this->db->query("select * from berita where id = $id")->result_array();
+        //hapus gambar di foler
+        unlink('upload/berita/'.$data[0]['gambar_berita']);
 
-        }    
+            $hapus = $this->Moap->delete('berita','id',$id);
+            
+                $this->session->set_flashdata('message', 'Hapus Berita Successfuly !!');
+                redirect('Berita/posting');
+
+        }   
+
+
+    public function show_edit($id = ""){
+        $data['murl'] = $this->murl;
+        $data['title'] = "Page - Edit Berita";
+        $data['form_judul'] = "Form edit berita";
+        $data['query'] = $this->db->query("select * from berita where id = $id")->result_array();
+        $this->load->view('vedit_berita',$data);
+
+    } 
+
+    public function edit_berita(){
+
+         //array insert
+           $update = array(
+            'judul' => $this->input->post('judul'),
+            'isi' => $this->input->post('isi')
+            );
+
+            $this->db->where('id', $this->input->post('id'));
+            $this->db->update('berita', $update);
+
+            $this->session->set_flashdata('message', 'Update Berita Successfuly !!');
+            redirect('Berita/posting');
+
+    }
     
 
 }

@@ -163,11 +163,12 @@ a:hover {
 }
 
 .service .desc {
-	padding: 0 15px;
+	padding: 0 10px;
 	overflow: hidden;
+	height: 150px;
 }
 .service .desc h4 {
-	font-size: 22px;
+	font-size: 18px;
 	line-height: 25px;
 }
 

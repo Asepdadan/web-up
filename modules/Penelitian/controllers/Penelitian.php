@@ -19,16 +19,34 @@ class Penelitian extends MX_Controller {
 
     function index(){
         $data['murl'] = $this->murl;
-        $this->load->view('vpenelitian',$data);
+        $data['menu'] = "Penelitian";
+          $data['header'] = "Profile Penelitian Polban";
+        $this->load->view('vprofile_penelitian',$data);
     }
     function skema_penelitian(){
         $data['murl'] = $this->murl;
+        $data['menu'] = "Penelitian";
+        $data['title'] = "Polban - Skema Penelitian Page";
+        $data['header'] = "Skema Penelitian";
         $this->load->view('vskema',$data);
     }
 
     function profile_penelitian(){
         $data['murl'] = $this->murl;
         $this->load->view('vprofile_peneliti',$data);
+    }
+
+
+    //template baru
+    function profile()
+    {
+        # code...
+    $data['murl'] = $this->murl;
+    $data['menu'] = "Penelitian";
+    $data['title'] = "Polban - Profile Penelitian Page";
+    $data['header'] = "Profile Penelitian";
+     $this->load->view('vprofile_penelitian',$data);   
+
     }
 
 }

@@ -1,200 +1,49 @@
-<!DOCTYPE html>
-<head>
+<!--=== header ===-->       
+<?php echo modules::run('Utama/header');  ?>
+<!--=== header ===-->       
 
-<html lang="en">
-  <head>
-
-
-    <meta charset="utf-8">
-
-    <title>Penelitian Politeknik Bandung</title>
+<!--=== Menu ===-->     
+<?php echo modules::run('Menu/main');  ?>
+<!--=== Menu ===-->
 
 
 
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs" style="height: 100px;margin: 20px;">
+        <div class="container">
+            <!-- <h2 class="pull-left">Blog Medium</h2>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li class="active">Blog Medium</li>
+            </ul> -->
+            <h4 style="font-size: 16pt;" class="pull-left">Profile UPPM Polban</h4>
+        </div><hr>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
 
-  </head>
+    <!--=== Content Part ===-->
+    <div class="container content">
+        <div class="row blog-page">
+            <!-- Left Sidebar -->
+            <div class="col-md-12 md-margin-bottom-40">
+                
+            <p class="text-justify">
+                
 
- 
-    <!-- Fixed navbar -->
-    <?php $this->view('template/vmenu'); ?>
-    <br>
-    <br>
-   <body align="center">
-    <h2>Daftar Penelitian </h2>
-    <p>Tahun 2015</p>
-  <a href="<?php echo base_url('index.php/Chome'); ?>" class="easyui-linkbutton" data-options="plain:true">Grafik</a>
-    <table id="dg" title="PENELITIAN" class="easyui-datagrid" style="width:1310px; height:450px"
-            url="get_users.php"
-            toolbar="#toolbar" pagination="true"
-            rownumbers="true" fitColumns="true" singleSelect="true" nowrap="false">
-        <thead>
-            <tr>
-           
-                <th field="nama ketua" width="30">Nama Ketua</th>
-                <th field="nama anggota" width="30">Nama Anggota</th>
-                <th field="jurusan" width="20">Jurusan</th>
-                <th field="judul" width="40">Judul</th>
-                <th field="jenis" width="10">Jenis</th>
-                <th field="sumber dana" width="20">Sumber Dana</th>
-                <th field="besar dana" width="20">Besar Dana</th>
-                <th field="tahun anggaran" width="10">TA</th>
-                <th field="jumlah peneliti" width="15">Jumlah Peneliti</th>
-            </tr>
-        </thead>
-        <tbody>
+Pada tahun 2007, Polban menyatakan visi untuk menjadi Universitas Riset Kelas Dunia, yang berorientasi untuk memenuhi kebutuhan bangsa, berdasarkan Pancasila (Lima Prinsip Dasar Republik Indonesia). Mengingat pentingnya kegiatan penelitian, Polban telah mengambil beberapa langkah yang menempatkan banyak penekanan pada penelitian. Salah satu langkah ini menyatukan kegiatan penelitian dan pelayanan masyarakat menjadi satu lembaga yang disebut Lembaga Penelitian dan Pengabdian Kepada Masyarakat (LPPM).
 
-               <tbody>
-    <?php $i = 1; ?>
-    <?php foreach ($view AS $row) { ?>
-        <tr>
+Lembaga Penelitian dan Pengabdian Kepada Masyarakat atau LPPM Polban dilahirkan sebagai hasil dari penggabungan antara Lembaga Penelitian dan Lembaga Pengabdian Masyarakat, keduanya merupakan lembaga Polban. Dasar hukum untuk pembentukannya adalah SK Rektor nomor 47/P/SK/HT/2006. Melalui penggabungan dari dua lembaga tersebut, diharapkan hasil dari kegiatan penelitian yang dilakukan di Polban bermanfaat bagi masyarakat dan cukup dekat dengan kebutuhan para pemangku kepentingan. Selanjutnya diharapkan dengan adanya penyatuan peran LPPM Polban tersebut dapat mendukung Polban untuk mencapai visi sebagai universitas riset internasional secara optimal.
 
-          
-	    <td><?php echo $row->nama_ketua ?></td>
-	    <td><?php echo $row->nama_anggota ?></td>
-	    <td><?php echo $row->jurusan ?></td>
-	    <td><?php echo $row->judul ?></td>
-	    <td><?php echo $row->jenis ?></td>
-	    <td><?php echo $row->sumber_dana ?></td>
-	    <td><?php echo $row->besar_dana ?></td>
-	    <td><?php echo $row->ta ?></td>
-	    <td><?php echo $row->jml_peneliti ?></td> </tr>
-    <?php } ?>
-     </tbody>
-          
-    </table>
-<!--    <div id="toolbar">
-        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">Tambah Data</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit Data</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Remove Data</a>
-    </div>-->
+Secara struktural, posisi LPPM berada di bawah koordinasi Wakil Rektor Bidang Penelitian dan Pengabdian Masyarakat. Oleh karena itu, dalam melaksanakan kegiatannya LPPM berkonsultasi dan melaporkan hasil penelitian ke Wakil Rektor Bidang Penelitian, dan Pengabdian Masyarakat. Tugas LPPM adalah memfasilitasi, mengkoordinasikan dan melakukan penelitian serta kegiatan pelayanan masyarakat di Polban, serta terus melakukan pembangunan dan peningkatan kualitas dan kuantitas penelitian dan pelayanan masyarakat, dan melaksanakan penelitian multi-disiplin dan atau penelitian kolaboratif.
 
-    <div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
-            closed="true" buttons="#dlg-buttons">
-        <div class="ftitle">Data Penelitian</div>
-        <form id="fm" method="post" novalidate>
-            <div class="fitem">
-                <label>No.:</label>
-                <input name="no" class="easyui-textbox" required="true">
+            </p>
             </div>
-            <div class="fitem">
-                <label>Nama Ketua:</label>
-                <input name="nama ketua" class="easyui-textbox" required="true">
-            </div>
-            <div class="fitem">
-                <label>Nama Anggota:</label>
-                <input name="nama anggota" class="easyui-textbox">
-            </div>
-            <div class="fitem">
-                <label>Jurusan:</label>
-                <input name="jurusan" class="easyui-textbox" >
-            </div>
-            <div class="fitem">
-                <label>Judul:</label>
-                <input name="judul" class="easyui-textbox" >
-            </div>
-            <div class="fitem">
-                <label>Jenis:</label>
-                <input name="jenis" class="easyui-textbox" >
-            </div>
-            <div class="fitem">
-                <label>Sumber Dana:</label>
-                <input name="sumber dana" class="easyui-textbox" >
-            </div>
-            <div class="fitem">
-                <label>Besar Dana:</label>
-                <input name="besar dana" class="easyui-textbox">
-            </div>
-            <div class="fitem">
-                <label>Tahun Anggaran:</label>
-                <input name="tahun anggaran" class="easyui-textbox">
-            </div>
-            <div class="fitem">
-                <label>Jumlah Peneliti:</label>
-                <input name="jumlah peneliti" class="easyui-textbox">
-            </div>
-        </form>
-    </div>
-    <div id="dlg-buttons">
-        <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">Save</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
-    </div>
-    <script type="text/javascript">
-        var url;
-        function newUser(){
-            $('#dlg').dialog('open').dialog('center').dialog('setTitle','Tambah Data');
-            $('#fm').form('clear');
-            url = 'save_user.php';
-        }
-        function editUser(){
-            var row = $('#dg').datagrid('getSelected');
-            if (row){
-                $('#dlg').dialog('open').dialog('center').dialog('setTitle','Edit User');
-                $('#fm').form('load',row);
-                url = 'update_user.php?id='+row.id;
-            }
-        }
-        function saveUser(){
-            $('#fm').form('submit',{
-                url: url,
-                onSubmit: function(){
-                    return $(this).form('validate');
-                },
-                success: function(result){
-                    var result = eval('('+result+')');
-                    if (result.errorMsg){
-                        $.messager.show({
-                            title: 'Error',
-                            msg: result.errorMsg
-                        });
-                    } else {
-                        $('#dlg').dialog('close');        // close the dialog
-                        $('#dg').datagrid('reload');    // reload the user data
-                    }
-                }
-            });
-        }
-        function destroyUser(){
-            var row = $('#dg').datagrid('getSelected');
-            if (row){
-                $.messager.confirm('Confirm','Are you sure you want to destroy this user?',function(r){
-                    if (r){
-                        $.post('destroy_user.php',{id:row.id},function(result){
-                            if (result.success){
-                                $('#dg').datagrid('reload');    // reload the user data
-                            } else {
-                                $.messager.show({    // show error message
-                                    title: 'Error',
-                                    msg: result.errorMsg
-                                });
-                            }
-                        },'json');
-                    }
-                });
-            }
-        }
-    </script>
-    <style type="text/css">
-        #fm{
-            margin:0;
-            padding:10px 30px;
-        }
-        .ftitle{
-            font-size:14px;
-            font-weight:bold;
-            padding:5px 0;
-            margin-bottom:10px;
-            border-bottom:1px solid #ccc;
-        }
-        .fitem{
-            margin-bottom:5px;
-        }
-        .fitem label{
-            display:inline-block;
-            width:80px;
-        }
-        .fitem input{
-            width:160px;
-        }
-    </style>
-</body>
-</html>
+            <!-- End Left Sidebar -->
+        </div><!--/row-->
+    </div><!--/container-->
+    <!--=== End Content Part ===-->
+
+<!--=== footer ===-->       
+        <?php echo modules::run('Utama/footer');  ?>
+<!--=== footer ===-->       

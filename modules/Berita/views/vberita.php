@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Halaman Dashboard</title>
+        <title><?php echo $title; ?></title>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -106,7 +106,7 @@
                           <!-- //info pemberitahuan -->
 
                           <?php
-                          if(empty($this->session->userdata('message'))){
+                          if(empty($this->session->userdata('message')) == TRUE){
                             
                           }else{
 
@@ -123,7 +123,7 @@
                             <div class="form-group">
                             <label class="col-md-3 control-label">Judul Berita</label>
                             <div class="col-md-6">
-                                <div class="input-group">
+                                <div class="form-group">
                                     <textarea name="judul" id="inputJudul" class="form-control" required="required"></textarea>
                                     
                                 </div>
@@ -133,7 +133,7 @@
                             <div class="form-group">
                             <label class="col-md-3 control-label">Isi Berita</label>
                             <div class="col-md-6">
-                                <div class="input-group">
+                                <div class="form-group">
                                     <textarea name="isi" id="inputJudul" class="form-control" required="required"></textarea>
                                     
                                 </div>
@@ -177,31 +177,37 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Judul</th>
+                                                <th width="200">Judul</th>
                                                 <th width="400" height="5">Isi Berita</th>
                                                 <th>Tanggal Posting</th>
                                                 <th>Flag</th>
-                                                <th>Action</th>
+                                                <th class="text-center">Action</th>
 
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <?php $no = 1; foreach ($query as $row) {
+                                         <?php $no = 1; foreach ($query as $row) {
                                                 # code...
-                                            }
+                                            
                                             ?>
+                                        
+
+                                        
+                                        
+
+                                           
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
-                                                <td><?php echo $row->judul; ?></td>
-                                                <td><?php echo $row->isi; ?></td>
-                                                <td>2016 April 27 22:10:00</td>
+                                                <td><?php echo $row['judul']; ?></td>
+                                                <td><?php echo $row['isi']; ?></td>
+                                                <td><?php echo $row['tanggal_upload']; ?></td>
                                                 <td>On</td>
-                                                <td><a href="<?php echo base_url('/Berita/delete_berita/').$row->id; ?>" style="padding-right: 15px;"><span class="alert alert-danger glyphicon glyphicon-trash"></span></a> <a href=""><span class="alert alert-info glyphicon glyphicon-pencil"></span> </a></td>
+                                                <td><a href="<?php echo base_url().'Berita/delete_berita/'.$row['id']; ?>" style="padding-right: 15px;"><span class="alert alert-danger glyphicon glyphicon-trash"></span></a> <a href="<?php echo base_url().'Berita/show_edit/'.$row['id']; ?>"><span class="alert alert-info glyphicon glyphicon-pencil"></span> </a></td>
 
                                             </tr>
+                                            
 
-
-                                        </tbody>
+                                        
+                                        <?php } ?>
                                     </table>
                                 </div>
 
